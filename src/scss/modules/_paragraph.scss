@@ -1,0 +1,22 @@
+@import '../_variables';
+
+.paragraph {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__span {
+    max-width: 80%;
+    font-size: $global-font-size-xl;
+
+    @media (max-width: $breakpoint-tablet-width) {
+      max-width: 85%;
+      padding: 40px 0;
+    }
+
+    @media (max-width: $breakpoint-mobile-width) {
+      font-size: $global-font-size-l;
+    }
+  }
+}

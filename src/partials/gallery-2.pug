@@ -1,0 +1,12 @@
+.gallery.gallery--center
+    .gallery__item.gallery__item--l
+      .gallery__wrapper
+        a.gallery__link(href='#')
+          picture
+            source(srcset=require('../assets/images/photo-desktop-960x1229.jpg') media='(min-width: 455px)')
+            img.gallery__image(src=require('../assets/images/photo-mobile-764x980.jpg') alt='' loading='lazy')
+      header.gallery__header
+        h2.gallery__title Lorem ipsum dolor sit, amet
+        span.gallery__info JU&Zdot; WKR&Oacute;TCE
+        a.gallery__link(href='#')
+          span.gallery__cta Zobacz

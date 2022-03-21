@@ -1,0 +1,73 @@
+@import '_variables';
+@import '_fonts';
+
+@import 'modules/_header';
+@import 'modules/_button';
+@import 'modules/_gallery';
+@import 'modules/_paragraph';
+@import 'modules/_product';
+// @import 'modules/_background';
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+
+  --viewportWidth: calc(100vw - var(--scrollbarWidth));
+}
+
+.c-content {
+  padding: 0 0 20px;
+}
+
+.c-headline {
+  display: none;
+}
+
+.c-layout_row.c-layout_item.is-breadcrumb.is-container {
+  display: none;
+}
+
+.c-layout_col.is-content,
+.c-layout_row.is-content {
+  @media screen and (min-width: 980px) {
+    width: 100%;
+    float: none;
+  }
+}
+
+.c-layout_col.c-layout_item.is-sidebar {
+  display: none;
+}
+
+.main {
+  color: $main-color;
+  font-family: $main-font;
+  font-size: $global-font-size;
+  line-height: $global-line-height;
+  font-weight: $global-font-weight;
+  letter-spacing: $global-letter-spacing;
+  min-width: $main-min-width;
+  max-width: $main-max-width;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 0 0 calc($gap-desktop / 2) 0;
+  gap: $gap-desktop;
+
+  @media (max-width: $breakpoint-tablet-width) {
+    padding: 0 0 calc($gap-mobile / 2) 0;
+    gap: $gap-mobile;
+  }
+
+  box-sizing: border-box;
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}

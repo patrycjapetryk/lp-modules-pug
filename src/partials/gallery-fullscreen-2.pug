@@ -1,0 +1,28 @@
+.gallery.gallery--fullscreen
+    .gallery__item.gallery__item--m
+      .gallery__wrapper
+        a.gallery__link(href='#')
+          div(style='padding: 128.15% 0 0 0; position: relative')
+            iframe(src='https://player.vimeo.com/video/686607125?h=836a2f413d&background=1' frameborder='0' allow='autoplay' style='\
+            position: absolute;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            height: 100%;\
+            ' title='video-1080x1384')
+      header.gallery__header
+        h2.gallery__title Lorem ipsum dolor sit, amet
+        span.gallery__info
+        a.gallery__link(href='#')
+          span.gallery__cta Zobacz
+    .gallery__item.gallery__item--m
+      .gallery__wrapper
+        a.gallery__link(href='#')
+          picture
+            source(srcset=require('../assets/images/photo-desktop-1200x1538-2.jpg') media='(min-width: 768px)')
+            img.gallery__image(src=require('../assets/images/photo-mobile-382-490-2.jpg') alt='' loading='lazy')
+      header.gallery__header
+        h2.gallery__title Consectetur adipisicing elit
+        span.gallery__info
+        a.gallery__link(href='#')
+          span.gallery__cta Zobacz
