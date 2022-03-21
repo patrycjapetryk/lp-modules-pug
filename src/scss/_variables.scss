@@ -1,0 +1,58 @@
+// colors
+
+$black: #000000;
+$white: #ffffff;
+$dark-grey: #222222;
+$light-grey: #f8f8f8;
+
+$main-color: $black;
+$second-color: $white;
+
+// fonts family
+
+$main-font: 'Univers LT W05_55 Roman', sans-serif;
+$second-font: 'Univers LT W05_55 Roman', sans-serif;
+
+// fonts size
+
+$global-font-size: 14px;
+$global-font-size-xl: 15px;
+$global-font-size-l: 13px;
+$global-font-size-m: 12px;
+$global-font-size-ms: 11px;
+$global-font-size-s: 10px;
+$global-font-size-xs: 9px;
+
+$global-line-height: 1.4;
+$global-font-weight: normal;
+$global-letter-spacing: -0.008em;
+
+// global margins and padding
+
+$gap-desktop: 160px;
+$gap-mobile: 50px;
+
+// button
+
+$button-font: $main-font;
+$button-font-size: 12px;
+$button-line-height: 1.1;
+$button-padding: 15px 60px;
+$button-margin: 0 0 30px;
+$button-color: $main-color;
+$button-border-radius: 0;
+$button-letter-spacing: 0.05em;
+
+// breakpoints
+
+$breakpoint-large-desktop-width: 2560px;
+$breakpoint-desktop-width: 1440px;
+$breakpoint-laptop-width: 1024px;
+$breakpoint-tablet-width: 764px;
+$breakpoint-mobile-width: 455px;
+$breakpoint-small-mobile-width: 375px;
+
+// max & min main width
+
+$main-max-width: 1300px;
+$main-min-width: 320px;

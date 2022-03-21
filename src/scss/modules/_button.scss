@@ -1,0 +1,62 @@
+@import '../_variables';
+
+.button {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $button-font;
+  letter-spacing: $button-letter-spacing;
+  margin-top: -50px;
+
+  @media (max-width: $breakpoint-tablet-width) {
+    margin-top: 0;
+  }
+
+  &__link {
+    display: block;
+    padding: $button-padding;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    border-radius: $button-border-radius;
+    border: 1px solid $button-color;
+    color: $second-color !important;
+    background-color: $main-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: $button-margin;
+    transition: 0.2s;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      font-size: 11px;
+      padding: 12px 50px;
+    }
+
+    &:hover {
+      color: $button-color !important;
+      background-color: $second-color;
+    }
+
+    &--outlined {
+      color: $button-color;
+      background-color: transparent;
+
+      &:hover {
+        color: transparent;
+        background-color: $button-color;
+      }
+    }
+  }
+
+  &__link-underlined {
+    font-size: $button-font-size;
+    color: $button-color;
+    line-height: $button-line-height;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    margin: $button-margin;
+    border-bottom: 1px solid $main-color;
+  }
+}
