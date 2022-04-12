@@ -24,7 +24,6 @@ head
   include ../partials/gallery-horizontal-1.pug
   include ../partials/button.pug
 
-
 script.
   (function () {
   var scrollAnimationItems = document.querySelectorAll('.product--js');
@@ -48,11 +47,10 @@ script.
   }
   });
   };
-  window.addEventListener('load', animationOnScroll);
   window.addEventListener('scroll', animationOnScroll);
+  window.addEventListener('load', animationOnScroll);
   window.addEventListener('resize', animationOnScroll);
   })();
-
 script.
   (function () {
   var galleryItems = document.querySelectorAll('.gallery__item--js');
@@ -90,32 +88,9 @@ script.
   });
   });
   })();
-
-script(src='https://player.vimeo.com/api/player.js')
 script.
   // waitForElement('.c-header', function () {
   (function () {
-  var mainVideo = document.querySelector('.main-video--js');
-  var player = new Vimeo.Player(mainVideo);
-  var audioBtn = document.querySelector('.header__audio-btn');
-  var audioIconOff = document.querySelector(
-  '.header__audio-btn-icon-off',
-  );
-  var audioIconOn = document.querySelector('.header__audio-btn-icon-on');
-  player.setVolume(0);
-  audioBtn.addEventListener('click', function () {
-  player.getVolume().then(function (volume) {
-  if (volume !== 0) {
-  player.setVolume(0);
-  audioIconOn.style.opacity = '0';
-  audioIconOff.style.opacity = '1';
-  } else {
-  player.setVolume(1);
-  audioIconOn.style.opacity = '1';
-  audioIconOff.style.opacity = '0';
-  }
-  });
-  });
   var scrollbarWidth = window.innerWidth - document.body.clientWidth;
   if (navigator.appVersion.indexOf('Win') != -1) {
   document.body.style.setProperty(
@@ -125,6 +100,46 @@ script.
   } else {
   document.body.style.setProperty('--scrollbarWidth', `0px`);
   }
+  var videoTag = document.querySelector('.header__video--js'),
+  videoSourceTag = document.querySelector('.header__video--js source'),
+  videoSourceSrc = videoSourceTag.getAttribute('src'),
+  videoSourceDataSrc = videoSourceTag.getAttribute('data-src'),
+  tabletMediaQuery = 764;
+  function setVideoSource() {
+  var windowWidth = window.innerWidth,
+  videoSource = videoSourceTag.getAttribute('src');
+  if (windowWidth > tabletMediaQuery) {
+  if (videoSource !== videoSourceDataSrc) {
+  videoSourceTag.setAttribute('src', videoSourceDataSrc);
+  videoTag.load();
+  }
+  } else {
+  if (videoSource !== videoSourceSrc) {
+  videoSourceTag.setAttribute('src', videoSourceSrc);
+  videoTag.load();
+  }
+  }
+  }
+  window.addEventListener('load', setVideoSource);
+  window.addEventListener('resize', setVideoSource);
+  var audioBtn = document.querySelector('.header__audio-btn--js');
+  var audioIconOff = document.querySelector(
+  '.header__audio-btn-icon--off-js',
+  );
+  var audioIconOn = document.querySelector(
+  '.header__audio-btn-icon--on-js',
+  );
+  audioBtn.addEventListener('click', function () {
+  if (videoTag.muted === false) {
+  videoTag.muted = true;
+  audioIconOn.style.opacity = '0';
+  audioIconOff.style.opacity = '1';
+  } else {
+  videoTag.muted = false;
+  audioIconOn.style.opacity = '1';
+  audioIconOff.style.opacity = '0';
+  }
+  });
   })();
   // });
   function waitForElement(elementId, callBack) {

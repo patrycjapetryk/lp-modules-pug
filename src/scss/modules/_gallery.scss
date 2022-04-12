@@ -101,6 +101,11 @@
     height: auto;
   }
 
+  &__video {
+    width: 100%;
+    display: block;
+  }
+
   // header
 
   &__header {
