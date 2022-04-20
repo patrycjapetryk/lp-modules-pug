@@ -67,6 +67,7 @@
     background-color: $white;
     font-size: $global-font-size-m;
     text-decoration: none;
+    animation: show-link 1s ease-out;
     display: none;
     overflow: hidden;
 
@@ -119,5 +120,14 @@
   }
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes show-link {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
