@@ -49,11 +49,12 @@
     "normalize.css": "^8.0.1"
   },
   "lint-staged": {
+    "src/**/*.{js,json}": [
+      "prettier --write --ignore-unknown",
+      "eslint"
+    ],
     "src/**/*": [
       "prettier --write --ignore-unknown"
-    ],
-    "src/**/*.{js,json}": [
-      "eslint"
     ]
   }
 }
