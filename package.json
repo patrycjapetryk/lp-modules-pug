@@ -1,12 +1,13 @@
 {
-  "name": "test",
+  "name": "lp-modules-pug",
   "version": "2.0.0",
   "description": "CCC boilerplate",
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js --mode production",
-    "publish": "npm run build && gh-pages -d dist"
+    "publish": "npm run build && gh-pages -d dist",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "pd",
@@ -23,13 +24,15 @@
     "html-inline-script-webpack-plugin": "^2.0.3",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
     "mini-css-extract-plugin": "^2.4.2",
     "postcss": "^8.3.9",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "2.4.1",
-    "pug-loader": "^2.4.0",
     "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
@@ -40,5 +43,10 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write"
+    ]
   }
 }
