@@ -167,4 +167,40 @@
     text-decoration: none;
     color: inherit;
   }
+
+  &__paragraph {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0 80px;
+  }
+
+  &__paragraph-span {
+    max-width: 60%;
+    font-size: $global-font-size-xl;
+
+    @media (max-width: $breakpoint-tablet-width) {
+      max-width: 85%;
+    }
+
+    @media (max-width: $breakpoint-mobile-width) {
+      font-size: $global-font-size-l;
+    }
+  }
+
+  &__paragraph-image {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    transform: translateY(-40px);
+
+    @media (max-width: $breakpoint-mobile-width) {
+      max-width: 65%;
+      transform: translateY(-20px);
+    }
+  }
 }
