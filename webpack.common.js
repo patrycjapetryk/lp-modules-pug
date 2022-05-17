@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/js/index.js',
+    background: './src/js/background.js',
   },
   output: {
     filename: 'js/[name].[hash:8].js',
@@ -91,7 +92,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/index.pug',
       inject: 'body',
-      chunks: ['index'],
+      chunks: ['index', 'background'],
       filename: 'index.html',
       minify: false,
     }),
