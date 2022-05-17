@@ -5,7 +5,7 @@
   text-align: center;
   overflow: hidden;
   background-color: $white;
-  padding: 30px 0;
+  padding: 25px 0;
 
   &--fullscreen {
     width: var(--viewportWidth);
@@ -15,26 +15,29 @@
     width: 200%;
     display: flex;
     justify-content: space-around;
-    animation: carousel 18s linear infinite;
+    animation: carousel 24s linear infinite;
 
-    // &--reverse {
-    //   animation: carousel 18s linear infinite reverse;
-    // }
-
-    @media (max-width: $breakpoint-mobile-width) {
+    @media (max-width: $breakpoint-desktop-width) {
+      width: 340%;
+      animation: carousel 38s linear infinite;
+    }
+    @media (max-width: $breakpoint-laptop-width) {
       width: 600%;
+      animation: carousel 50s linear infinite;
+    }
+    @media (max-width: $breakpoint-mobile-width) {
+      width: 1200%;
     }
   }
 
   &__item {
-    width: 6.25%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   &__image {
-    width: calc(100% - 24px);
+    width: calc(100% - 14px);
     display: block;
   }
 }
