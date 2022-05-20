@@ -9,7 +9,7 @@
   background-color: $white;
   overflow: hidden;
 
-  @media (max-width: $breakpoint-mobile-width) {
+  @media (max-width: $breakpoint-tablet-width) {
     display: none;
   }
 
