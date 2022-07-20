@@ -21,6 +21,10 @@
     width: var(--viewportWidth);
   }
 
+  &--background {
+    background-color: $grey;
+  }
+
   &--center {
     justify-content: center;
   }
@@ -93,11 +97,13 @@
   }
 
   &__container {
+    width: 100%;
     max-width: $main-max-width;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
+    padding: 100px 0 80px;
   }
 
   &__wrapper {
