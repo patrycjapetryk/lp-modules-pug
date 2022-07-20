@@ -22,6 +22,12 @@
   &__video {
     width: 100%;
     display: block;
+    aspect-ratio: 16/9;
+    background-color: $light-grey;
+
+    @media (max-width: $breakpoint-tablet-width) {
+      aspect-ratio: 1/1;
+    }
   }
 
   &__audio-btn {
