@@ -57,6 +57,7 @@ script.
   window.addEventListener('load', animationOnScroll);
   window.addEventListener('resize', animationOnScroll);
   })();
+  
 script.
   (function () {
   var galleryItems = document.querySelectorAll('.gallery__item--js');
@@ -94,8 +95,8 @@ script.
   });
   });
   })();
+
 script.
-  // waitForElement('.c-header', function () {
   (function () {
   var scrollbarWidth = window.innerWidth - document.body.clientWidth;
   if (navigator.appVersion.indexOf('Win') != -1) {
@@ -106,6 +107,10 @@ script.
   } else {
   document.body.style.setProperty('--scrollbarWidth', `0px`);
   }
+  })();
+
+script.
+  (function () {
   var videoTag = document.querySelector('.header__video--js'),
   videoSourceTag = document.querySelector('.header__video--js source'),
   videoSourceSrc = videoSourceTag.getAttribute('src'),
@@ -147,14 +152,4 @@ script.
   }
   });
   })();
-  // });
-  function waitForElement(elementId, callBack) {
-  window.setTimeout(function () {
-  var element = document.querySelectorAll(elementId);
-  if (element.length) {
-  callBack(elementId, element);
-  } else {
-  waitForElement(elementId, callBack);
-  }
-  }, 200);
-  }
+
