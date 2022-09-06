@@ -5,6 +5,8 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     background: './src/js/background.js',
+    player: './src/js/player.js',
+    products: './src/js/products.js',
   },
   output: {
     filename: 'js/[name].[hash:8].js',
@@ -92,7 +94,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/index.pug',
       inject: 'body',
-      chunks: ['index', 'background'],
+      chunks: ['index', 'background', 'player', 'products'],
       filename: 'index.html',
       minify: false,
     }),
