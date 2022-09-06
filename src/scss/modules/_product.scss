@@ -88,13 +88,19 @@
     min-width: 100px;
     flex-direction: column;
     padding: 7px 10px 9px;
+    margin: 0;
     text-align: center;
+    font-size: $global-font-size-m;
+    font-weight: normal;
   }
 
   &__title {
     min-width: 110px;
     color: $black;
     text-align: left;
+    font-size: $global-font-size-m;
+    font-weight: normal;
+    margin: 0;
   }
 
   &__price {
