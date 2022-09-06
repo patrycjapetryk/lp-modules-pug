@@ -1,36 +1,37 @@
-.gallery
-    .gallery__item.gallery__item--s.gallery__item--js
-      .gallery__wrapper.gallery__wrapper--js
-        a.gallery__link(href='#')
-          picture
-            source(srcset=require('../assets/images/photo-desktop-645x826-1.jpg') media='(min-width: 768px)')
-            img.gallery__image(src=require('../assets/images/photo-mobile-382-490-1.jpg') alt='' loading='lazy')
+section.gallery
+  figure.gallery__item.gallery__item--s.gallery__item--js
+    .gallery__wrapper.gallery__wrapper--js
+      a.gallery__link(href='#')
+        picture
+          source(srcset=require('../assets/images/photo-desktop-645x826-1.jpg') media='(min-width: 768px)')
+          img.gallery__image(src=require('../assets/images/photo-mobile-382-490-1.jpg') alt='' loading='lazy')
 
-        .product.product--js(style='left: 68%; top: 24%' tabindex='0')
-          .product__circle
-          a.product__link.product__link--js(href='https://ccc.eu/pl')
-            .product__text-wrapper
-              span.product__title Półbuty Togoshi
-              span.product__price 299,99 zł
-              span.product__cta zobacz
+      article.product.product--js(style='left: 68%; top: 24%' tabindex='0')
+        .product__circle
+        a.product__link.product__link--js(href='https://ccc.eu/pl')
+          header.product__text-wrapper
+            h3.product__title Półbuty Togoshi
+            span.product__price 299,99 zł
+            span.product__cta zobacz
 
-        .product.product--js(style='left: 39%; top: 94%' tabindex='0')
-          .product__circle
-          a.product__link.product__link--js(href='https://ccc.eu/pl')
-            .product__text-wrapper Już wkrótce
+      article.product.product--js(style='left: 39%; top: 94%' tabindex='0')
+        .product__circle
+        a.product__link.product__link--js(href='https://ccc.eu/pl')
+          h3.product__text-wrapper Już wkrótce
 
-      header.gallery__header
-        h2.gallery__title Lorem ipsum dolor sit, amet
-        span.gallery__info JU&Zdot; WKR&Oacute;TCE
-        a.gallery__link(href='#')
-          span.gallery__cta Zobacz
-    .gallery__item.gallery__item--s.gallery__item--js
-      .gallery__wrapper.gallery__wrapper--js
-        a.gallery__link(href='#')
-          video.gallery__video(autoplay='' loop='' muted='' playsinline='')
-            source(src=require('../assets/video/video-645x826.mp4') type='video/mp4')
-      header.gallery__header
-        h2.gallery__title Consectetur adipisicing elit
-        span.gallery__info JU&Zdot; WKR&Oacute;TCE
-        a.gallery__link(href='#')
-          span.gallery__cta Zobacz
+    figcaption.gallery__header
+      h2.gallery__title Lorem ipsum dolor sit, amet
+      span.gallery__info JU&Zdot; WKR&Oacute;TCE
+      a.gallery__link(href='#')
+        span.gallery__cta Zobacz
+
+  figure.gallery__item.gallery__item--s.gallery__item--js
+    .gallery__wrapper.gallery__wrapper--js
+      a.gallery__link(href='#')
+        video.gallery__video(autoplay='' loop='' muted='' playsinline='')
+          source(src=require('../assets/video/video-645x826.mp4') type='video/mp4')
+    figcaption.gallery__header
+      h2.gallery__title Consectetur adipisicing elit
+      span.gallery__info JU&Zdot; WKR&Oacute;TCE
+      a.gallery__link(href='#')
+        span.gallery__cta Zobacz

@@ -1,19 +1,19 @@
-.gallery.gallery--fullscreen
+section.gallery.gallery--fullscreen
   .gallery__container
-    .gallery__paragraph
+    p.gallery__paragraph
       img.gallery__paragraph-image(src=require('../assets/images/joyful-colors.svg') style="aspect-ratio: 585.147 / 248.835" alt='')
       span.gallery__paragraph-span
         | Morbi urna risus, tincidunt a dolor vel, iaculis aliquet ante. Vivamus
         | ut lacus eget justo bibendum pharetra. Maecenas nunc mi, porttitor ut
         | velit vel, fringilla dictum justo.
 
-    .gallery__item.gallery__item--l.gallery__item--js
+    figure.gallery__item.gallery__item--l.gallery__item--js
       .gallery__wrapper.gallery__wrapper--js
         a.gallery__link(href='#')
           picture
             source(srcset=require('../assets/images/photo-desktop-960x1229.jpg') media='(min-width: 455px)')
             img.gallery__image(src=require('../assets/images/photo-mobile-764x980.jpg') alt='' loading='lazy')
-      header.gallery__header
+      figcaption.gallery__header
         h2.gallery__title Lorem ipsum dolor sit, amet
         span.gallery__info JU&Zdot; WKR&Oacute;TCE
         a.gallery__link(href='#')
