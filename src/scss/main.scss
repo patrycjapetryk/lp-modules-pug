@@ -7,15 +7,11 @@
 @import 'modules/_paragraph';
 @import 'modules/_product';
 @import 'modules/_background';
-@import 'modules/_animated-text';
-@import 'modules/_animated-text-vertical';
 
 body {
   width: 100%;
   margin: 0;
   overflow-x: hidden;
-
-  --viewportWidth: calc(100vw - var(--scrollbarWidth));
 }
 
 .c-content {
@@ -43,6 +39,8 @@ body {
 }
 
 .main {
+  --viewportWidth: calc(100vw - var(--scrollbarWidth));
+
   color: $main-color;
   font-family: $main-font;
   font-size: $global-font-size;
