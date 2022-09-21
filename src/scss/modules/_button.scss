@@ -30,12 +30,12 @@
 
     @media (max-width: $breakpoint-mobile-width) {
       font-size: 11px;
-      padding: 12px 50px;
+      padding: 12px 40px;
     }
 
     &:hover {
       color: $button-color !important;
-      background-color: $second-color;
+      background-color: transparent;
     }
 
     &--outlined {
