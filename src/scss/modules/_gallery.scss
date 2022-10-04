@@ -109,6 +109,10 @@
     @media (max-width: $breakpoint-desktop-width) {
       max-width: $main-max-laptop;
     }
+
+    @media (max-width: $breakpoint-tablet-width) {
+      padding: 100px 0 20px;
+    }
   }
 
   &__wrapper {
