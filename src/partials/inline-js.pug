@@ -11,7 +11,7 @@ script.
   var itemTop = item.getBoundingClientRect().top;
   var itemBottom = item.getBoundingClientRect().bottom;
   var windowHeight = window.innerHeight;
-  item.style.transitionDelay = `0.${getRandomNumber(0, 5)}s`;
+  item.style.transitionDelay = `0.${getRandomNumber(0, 3)}s`;
   if (
   itemTop - windowHeight < 0 - animationStartDistance &&
   itemBottom > animationStartDistance

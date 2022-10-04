@@ -13,7 +13,7 @@ function animationOnScroll() {
     const itemBottom = item.getBoundingClientRect().bottom;
     const windowHeight = window.innerHeight;
 
-    item.style.transitionDelay = `0.${getRandomNumber(0, 5)}s`;
+    item.style.transitionDelay = `0.${getRandomNumber(0, 3)}s`;
 
     if (
       itemTop - windowHeight < 0 - animationStartDistance &&
