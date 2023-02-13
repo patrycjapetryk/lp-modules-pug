@@ -43,3 +43,22 @@ audioBtn.addEventListener('click', function () {
     audioIconOff.style.opacity = '0';
   }
 });
+
+// handle play/pause
+
+function playPause() {
+  if (videoTag.paused) {
+    videoTag.play();
+  } else {
+    videoTag.pause();
+  }
+}
+
+document.onkeydown = function (event) {
+  switch (event.keyCode) {
+    case 32:
+      event.preventDefault();
+      playPause();
+      break;
+  }
+};
