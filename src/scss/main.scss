@@ -1,42 +1,33 @@
 @import '_variables';
 @import '_fonts';
 
-@import 'modules/_header';
-@import 'modules/_button';
-@import 'modules/_gallery';
-@import 'modules/_paragraph';
-@import 'modules/_product';
-@import 'modules/_background';
+// body {
+//   margin: 0;
+// }
 
-body {
-  width: 100%;
-  margin: 0;
-  overflow-x: hidden;
-}
+// .c-content {
+//   padding: 0 0 20px;
+// }
 
-.c-content {
-  padding: 0 0 20px;
-}
+// .c-headline {
+//   display: none;
+// }
 
-.c-headline {
-  display: none;
-}
+// .c-layout_row.c-layout_item.is-breadcrumb.is-container {
+//   display: none;
+// }
 
-.c-layout_row.c-layout_item.is-breadcrumb.is-container {
-  display: none;
-}
+// .c-layout_col.is-content,
+// .c-layout_row.is-content {
+//   @media screen and (min-width: 980px) {
+//     width: 100%;
+//     float: none;
+//   }
+// }
 
-.c-layout_col.is-content,
-.c-layout_row.is-content {
-  @media screen and (min-width: 980px) {
-    width: 100%;
-    float: none;
-  }
-}
-
-.c-layout_col.c-layout_item.is-sidebar {
-  display: none;
-}
+// .c-layout_col.c-layout_item.is-sidebar {
+//   display: none;
+// }
 
 .main {
   --viewportWidth: calc(100vw - var(--scrollbarWidth));
@@ -59,10 +50,12 @@ body {
   padding: 0 0 calc($gap-desktop / 2) 0;
   gap: $gap-desktop;
 
+  @media (max-width: $main-max-width) {
+    overflow: hidden;
+  }
   @media (max-width: $breakpoint-desktop-width) {
     max-width: $main-max-laptop;
   }
-
   @media (max-width: $breakpoint-tablet-width) {
     padding: 0 0 calc($gap-mobile / 2) 0;
     gap: $gap-mobile;
@@ -75,3 +68,10 @@ body {
     box-sizing: inherit;
   }
 }
+
+@import 'modules/_header';
+@import 'modules/_button';
+@import 'modules/_gallery';
+@import 'modules/_paragraph';
+@import 'modules/_product';
+@import 'modules/_background';
