@@ -17,8 +17,8 @@
   }
 
   &--fullscreen {
-    // width: 100vw;
     width: var(--viewportWidth);
+    max-width: $fullscreen-max-width;
   }
 
   &--background {
