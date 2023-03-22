@@ -17,7 +17,7 @@ script.
     var getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
     function animationOnScroll() {
-      scrollAnimationItems.forEach(function(item) {
+      scrollAnimationItems.forEach(function (item) {
         var itemTop = item.getBoundingClientRect().top;
         var itemBottom = item.getBoundingClientRect().bottom;
         var windowHeight = window.innerHeight;
@@ -44,9 +44,11 @@ script.
       var tooltipRightPosition =
         tooltip.getBoundingClientRect().x + tooltip.getBoundingClientRect().width;
       var imageWrapperBottomPosition =
-        imageWrapper.getBoundingClientRect().y + imageWrapper.getBoundingClientRect().height;
+        imageWrapper.getBoundingClientRect().y +
+        imageWrapper.getBoundingClientRect().height;
       var tooltipBottomPosition =
-        tooltip.getBoundingClientRect().y + tooltip.getBoundingClientRect().height;
+        tooltip.getBoundingClientRect().y +
+        tooltip.getBoundingClientRect().height;
       if (tooltipRightPosition > window.innerWidth) {
         tooltip.classList.add('product__link--left');
       }
@@ -135,36 +137,32 @@ script.
 
   // wait for element
 
-  function waitForElement(id, callback){
-    var interval = setInterval(function(){
-        if(document.querySelector(id)){
-            clearInterval(interval);
-            callback();
-        }
+  function waitForElement(id, callback) {
+    var interval = setInterval(function () {
+      if (document.querySelector(id)) {
+        clearInterval(interval);
+        callback();
+      }
     }, 200);
   }
 
   waitForElement('.main', lpCallback);
 
-  
-
-//- handle background animation
-//- script.
-//-   (function () {
-//-   var background = document.querySelector('.background--js');
-//-   var backgroundAnimation = function () {
-//-     var opacityValue = function () {
-//-       var opacity = 1 - 0.0001 * window.scrollY;
-//-       if (opacity < 0.3) {
-//-         opacity = 0.3;
-//-       }
-//-       return opacity;
-//-     };
-//-     background.style.opacity = opacityValue();
-//-   };
-//-   backgroundAnimation();
-//-   document.addEventListener('scroll', backgroundAnimation);
-//-   window.addEventListener('resize', backgroundAnimation);
-//-   })();
-
-    
+  //- handle background animation
+  //- script.
+  //-   (function () {
+  //-   var background = document.querySelector('.background--js');
+  //-   var backgroundAnimation = function () {
+  //-     var opacityValue = function () {
+  //-       var opacity = 1 - 0.0001 * window.scrollY;
+  //-       if (opacity < 0.3) {
+  //-         opacity = 0.3;
+  //-       }
+  //-       return opacity;
+  //-     };
+  //-     background.style.opacity = opacityValue();
+  //-   };
+  //-   backgroundAnimation();
+  //-   document.addEventListener('scroll', backgroundAnimation);
+  //-   window.addEventListener('resize', backgroundAnimation);
+  //-   })();
