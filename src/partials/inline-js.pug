@@ -1,4 +1,3 @@
-
 script.
   function lpCallback() {
     //- fullscreen
@@ -16,8 +15,9 @@ script.
     var animationStartDistance = 0;
     var animationStartClassName = 'product--before';
     var getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-    var animationOnScroll = () => {
-      scrollAnimationItems.forEach((item) => {
+
+    function animationOnScroll() {
+      scrollAnimationItems.forEach(function(item) {
         var itemTop = item.getBoundingClientRect().top;
         var itemBottom = item.getBoundingClientRect().bottom;
         var windowHeight = window.innerHeight;
@@ -31,7 +31,7 @@ script.
           item.classList.add(animationStartClassName);
         }
       });
-    };
+    }
 
     animationOnScroll();
     window.addEventListener('scroll', animationOnScroll);
@@ -53,7 +53,7 @@ script.
       if (tooltipBottomPosition > imageWrapperBottomPosition) {
         tooltip.classList.add('product__link--top');
       }
-    };
+    }
 
     function setTooltipPosition(product, imageWrapper) {
       var tooltip = product.querySelector('.product__link--js');
@@ -63,7 +63,7 @@ script.
       product.addEventListener('mouseover', function () {
         menageClasses(tooltip, imageWrapper);
       });
-    };
+    }
 
     galleryItems.forEach(function (galleryItem) {
       var imageWrapper = galleryItem.querySelector('.gallery__wrapper--js');
@@ -94,7 +94,7 @@ script.
         }
       }
       videoTag.load();
-    };
+    }
 
     setVideoSource();
     window.addEventListener('resize', setVideoSource);
@@ -121,7 +121,7 @@ script.
       } else {
         videoTag.pause();
       }
-    };
+    }
 
     document.onkeydown = function (event) {
       switch (event.keyCode) {
@@ -131,9 +131,7 @@ script.
           break;
       }
     };
-
-    //- console.log("yes!!!!!!!!");
-  };
+  }
 
   // wait for element
 
@@ -144,7 +142,7 @@ script.
             callback();
         }
     }, 200);
-  };
+  }
 
   waitForElement('.main', lpCallback);
 
