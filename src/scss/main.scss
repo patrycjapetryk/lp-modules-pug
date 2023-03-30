@@ -28,11 +28,11 @@ body {
   padding: 0 0 calc($gap-desktop / 2) 0;
   gap: $gap-desktop;
 
-  @media (max-width: $main-max-width) {
-    overflow: hidden;
-  }
   @media (max-width: $breakpoint-desktop-width) {
     max-width: $main-max-laptop;
+  }
+  @media (max-width: $main-max-laptop) {
+    overflow-x: hidden;
   }
   @media (max-width: $breakpoint-tablet-width) {
     padding: 0 0 calc($gap-mobile / 2) 0;
@@ -52,6 +52,7 @@ body {
 @import 'modules/_gallery';
 @import 'modules/_paragraph';
 @import 'modules/_product';
+
 // @import 'modules/_background';
 
 // .c-content {
