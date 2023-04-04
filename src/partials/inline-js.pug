@@ -1,16 +1,5 @@
 script.
   function lpCallback() {
-    //- fullscreen
-    var scrollbarWidth = window.innerWidth - document.body.clientWidth;
-    var lpMain = document.querySelector('.main');
-
-    if (navigator.appVersion.indexOf('Win') != -1) {
-      lpMain.style.setProperty('--scrollbarWidth', `${scrollbarWidth}px`);
-    } else {
-      lpMain.style.setProperty('--scrollbarWidth', `0px`);
-    }
-
-    //- handle products
     var scrollAnimationItems = document.querySelectorAll('.product--js');
     var animationStartDistance = 0;
     var animationStartClassName = 'product--before';
@@ -37,7 +26,6 @@ script.
     window.addEventListener('scroll', animationOnScroll);
     window.addEventListener('resize', animationOnScroll);
 
-    //- products
     var galleryItems = document.querySelectorAll('.gallery__item--js');
 
     function menageClasses(tooltip, imageWrapper) {
@@ -76,7 +64,6 @@ script.
       });
     });
 
-    //- player
     var videoTag = document.querySelector('.header__video--js');
     var videoSourceTag = document.querySelector('.header__video--js source');
     var videoSourceSrc = videoSourceTag.getAttribute('src');
@@ -135,8 +122,6 @@ script.
     };
   }
 
-  // wait for element
-
   function waitForElement(id, callback) {
     var interval = setInterval(function () {
       if (document.querySelector(id)) {
@@ -147,22 +132,3 @@ script.
   }
 
   waitForElement('.main', lpCallback);
-
-  //- handle background animation
-  //- script.
-  //-   (function () {
-  //-   var background = document.querySelector('.background--js');
-  //-   var backgroundAnimation = function () {
-  //-     var opacityValue = function () {
-  //-       var opacity = 1 - 0.0001 * window.scrollY;
-  //-       if (opacity < 0.3) {
-  //-         opacity = 0.3;
-  //-       }
-  //-       return opacity;
-  //-     };
-  //-     background.style.opacity = opacityValue();
-  //-   };
-  //-   backgroundAnimation();
-  //-   document.addEventListener('scroll', backgroundAnimation);
-  //-   window.addEventListener('resize', backgroundAnimation);
-  //-   })();

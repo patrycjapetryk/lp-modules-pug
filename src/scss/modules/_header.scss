@@ -1,7 +1,7 @@
 @import '../_variables';
 
 .header {
-  width: var(--viewportWidth);
+  width: 100%;
   max-width: $fullscreen-max-width;
 
   display: flex;

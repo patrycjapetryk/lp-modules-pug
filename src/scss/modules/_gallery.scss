@@ -2,27 +2,27 @@
 
 .gallery {
   width: 100%;
+  max-width: $main-max-width;
   text-align: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
 
-  @media (max-width: $main-max-width) {
+  @media (max-width: $breakpoint-desktop-width) {
+    max-width: $main-max-laptop;
+  }
+  @media (max-width: $main-max-laptop) {
     justify-content: space-around;
   }
 
-  @media (max-width: $breakpoint-mobile-width) {
-    width: 100vw;
-  }
-
   &--fullscreen {
-    width: var(--viewportWidth);
-    max-width: $fullscreen-max-width;
+    max-width: 100%;
   }
 
   &--background {
     background-color: $grey;
+    padding-bottom: 40px;
   }
 
   &--center {
