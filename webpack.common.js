@@ -76,7 +76,7 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           // filename: 'video/[name][hash:8][ext][query]',
-          filename: 'video/[name].[ext][query]',
+          filename: 'video/[name][ext][query]',
         },
       },
     ],
