@@ -15,6 +15,9 @@ module.exports = {
     // assetModuleFilename: 'images/[name].[hash:8][ext][query]',
     assetModuleFilename: 'images/[name][ext][query]',
   },
+  optimization: {
+    minimize: false,
+  },
   module: {
     rules: [
       {
