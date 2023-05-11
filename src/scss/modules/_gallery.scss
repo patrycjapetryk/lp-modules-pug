@@ -47,7 +47,7 @@
     }
     &--l {
       // large vertical item
-      width: 50%;
+      width: 51%;
 
       @media (max-width: $breakpoint-mobile-width) {
         width: 100%;
@@ -68,7 +68,7 @@
 
     &--s {
       // two items
-      width: 42%;
+      width: 47%;
 
       @media (max-width: $breakpoint-tablet-width) {
         width: 50%;
