@@ -66,8 +66,8 @@ function lpCallback() {
     });
   });
 
-  var videoTag = document.querySelector('.header__video--js');
-  var videoSourceTag = document.querySelector('.header__video--js source');
+  var videoTag = document.querySelector('.player__video--js');
+  var videoSourceTag = document.querySelector('.player__video--js source');
   var videoSourceSrc = videoSourceTag.getAttribute('src');
   var videoSourceDataSrc = videoSourceTag.getAttribute('data-src');
   var tabletMediaQuery = 764;
@@ -90,9 +90,9 @@ function lpCallback() {
   setVideoSource();
   window.addEventListener('resize', setVideoSource);
 
-  var audioBtn = document.querySelector('.header__audio-btn--js');
-  var audioIconOff = document.querySelector('.header__audio-btn-icon--off-js');
-  var audioIconOn = document.querySelector('.header__audio-btn-icon--on-js');
+  var audioBtn = document.querySelector('.player__audio-btn--js');
+  var audioIconOff = document.querySelector('.player__audio-btn-icon--off-js');
+  var audioIconOn = document.querySelector('.player__audio-btn-icon--on-js');
 
   audioBtn.addEventListener('click', function () {
     if (videoTag.muted === false) {
