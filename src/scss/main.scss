@@ -17,6 +17,7 @@ body {
   max-width: $fullscreen-max-width;
   min-width: $main-min-width;
   margin: 0 auto;
+  position: relative;
 
   display: flex;
   align-items: center;
@@ -37,6 +38,18 @@ body {
   *::before,
   *::after {
     box-sizing: inherit;
+  }
+
+  &::before {
+    content: '';
+    width: 36%;
+    height: 100%;
+    display: block;
+    background-color: $background-color;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
   }
 
   // &::before {
