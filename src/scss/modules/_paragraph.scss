@@ -13,22 +13,15 @@
   }
 
   &__span {
-    max-width: 80%;
+    max-width: 55%;
     font-size: $global-font-size-xl;
 
-    @media (max-width: $breakpoint-tablet-width) {
+    @media (max-width: $breakpoint-laptop-width) {
       max-width: 85%;
     }
 
     @media (max-width: $breakpoint-mobile-width) {
       font-size: $global-font-size-l;
     }
-  }
-
-  &__image {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    height: auto;
   }
 }

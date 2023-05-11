@@ -14,7 +14,7 @@ body {
   letter-spacing: $global-letter-spacing;
 
   width: 100%;
-  // max-width: $fullscreen-max-width;
+  max-width: $fullscreen-max-width;
   min-width: $main-min-width;
   margin: 0 auto;
 
@@ -53,6 +53,7 @@ body {
   // }
 }
 
+@import 'modules/_header';
 @import 'modules/_player';
 @import 'modules/_button';
 @import 'modules/_gallery';
