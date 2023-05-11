@@ -1,34 +1,30 @@
 @import '../_variables';
 
 .paragraph {
+  width: 100%;
+  max-width: $main-max-width;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
+  margin: 0;
 
   @media (max-width: $breakpoint-tablet-width) {
     padding: 40px 0;
   }
 
   &__span {
-    max-width: 80%;
+    max-width: 60%;
     font-size: $global-font-size-xl;
 
-    @media (max-width: $breakpoint-tablet-width) {
+    @media (max-width: $breakpoint-laptop-width) {
       max-width: 85%;
     }
 
     @media (max-width: $breakpoint-mobile-width) {
       font-size: $global-font-size-l;
     }
-  }
-
-  &__image {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    height: auto;
   }
 }
