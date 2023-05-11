@@ -1,6 +1,9 @@
 @import '../_variables';
 
 .paragraph {
+  width: 100%;
+  max-width: $main-max-width;
+  margin: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -13,7 +16,7 @@
   }
 
   &__span {
-    max-width: 55%;
+    max-width: 60%;
     font-size: $global-font-size-xl;
 
     @media (max-width: $breakpoint-laptop-width) {
