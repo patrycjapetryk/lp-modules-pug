@@ -1,6 +1,10 @@
 import '../scss/main.scss';
 
 function lpCallback() {
+  var carousel = document.querySelector('.carousel__wrapper--js');
+  var carouselClone = carousel.cloneNode(true);
+  carousel.after(carouselClone);
+
   var scrollAnimationItems = document.querySelectorAll('.product--js');
   var animationStartDistance = 0;
   var animationStartClassName = 'product--before';

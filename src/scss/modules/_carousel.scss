@@ -2,12 +2,10 @@
 
 .carousel {
   --number-of-items: 6;
-  --number-of-all-items: calc(var(--number-of-items) * 2);
 
   width: 100%;
   // max-width: $main-max-width;
   text-align: left;
-  // overflow: hidden;
   overflow-x: auto;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -16,10 +14,8 @@
   }
 
   &__container {
-    // width: 200%;
-    width: calc(var(--number-of-all-items) * 20%);
+    width: calc(var(--number-of-items) * 40%);
     display: flex;
-    justify-content: space-around;
     animation: carousel 16s linear infinite;
 
     &:hover {
@@ -27,13 +23,24 @@
     }
 
     @media (max-width: $main-max-laptop) {
-      width: calc(var(--number-of-all-items) * 35%);
+      width: calc(var(--number-of-items) * 70%);
     }
+    @media (max-width: $breakpoint-tablet-width) {
+      width: calc(var(--number-of-items) * 55%);
+      animation-play-state: paused;
+    }
+  }
+
+  &__wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
 
     @media (max-width: $breakpoint-tablet-width) {
-      // width: 600%;
-      width: calc(var(--number-of-all-items) * 55%);
-      animation-play-state: paused;
+      width: 100%;
+      &:last-child {
+        display: none;
+      }
     }
   }
 
