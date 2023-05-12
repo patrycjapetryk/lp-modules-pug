@@ -45,6 +45,17 @@
         }
       }
     }
+    &--ll {
+      // large vertical item
+      width: 56%;
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+        .gallery__header {
+          margin-left: 4px;
+        }
+      }
+    }
     &--l {
       // large vertical item
       width: 51%;
@@ -56,7 +67,6 @@
         }
       }
     }
-
     &--m {
       // two large items
       width: 50%;
