@@ -1,7 +1,8 @@
 @import '../_variables';
 
 .carousel {
-  --number-of-items: 6;
+  --first-carusel-number-of-items: 6;
+  --second-carusel-number-of-items: 8;
 
   width: 100%;
   // max-width: $main-max-width;
@@ -14,7 +15,7 @@
   }
 
   &__container {
-    width: calc(var(--number-of-items) * 40%);
+    width: calc(var(--first-carusel-number-of-items) * 40%);
     display: flex;
     animation: carousel 16s linear infinite;
 
@@ -23,11 +24,23 @@
     }
 
     @media (max-width: $main-max-laptop) {
-      width: calc(var(--number-of-items) * 70%);
+      width: calc(var(--first-carusel-number-of-items) * 70%);
     }
     @media (max-width: $breakpoint-tablet-width) {
-      width: calc(var(--number-of-items) * 55%);
+      width: calc(var(--first-carusel-number-of-items) * 55%);
       animation-play-state: paused;
+    }
+
+    &--second-carousel {
+      width: calc(var(--second-carusel-number-of-items) * 40%);
+
+      @media (max-width: $main-max-laptop) {
+        width: calc(var(--second-carusel-number-of-items) * 70%);
+      }
+      @media (max-width: $breakpoint-tablet-width) {
+        width: calc(var(--second-carusel-number-of-items) * 55%);
+        animation-play-state: paused;
+      }
     }
   }
 
