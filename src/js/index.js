@@ -1,7 +1,7 @@
 import '../scss/main.scss';
 
 function lpCallback() {
-  var carousels = document.querySelectorAll('.carousel__wrapper--js');
+  var carousels = document.querySelectorAll('.logo-carousel__wrapper--js');
 
   carousels.forEach(function (carousel) {
     var carouselClone = carousel.cloneNode(true);
