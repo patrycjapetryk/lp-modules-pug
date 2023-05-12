@@ -1,9 +1,12 @@
 import '../scss/main.scss';
 
 function lpCallback() {
-  var carousel = document.querySelector('.carousel__wrapper--js');
-  var carouselClone = carousel.cloneNode(true);
-  carousel.after(carouselClone);
+  var carousels = document.querySelectorAll('.carousel__wrapper--js');
+
+  carousels.forEach(function (carousel) {
+    var carouselClone = carousel.cloneNode(true);
+    carousel.after(carouselClone);
+  });
 
   var scrollAnimationItems = document.querySelectorAll('.product--js');
   var animationStartDistance = 0;
