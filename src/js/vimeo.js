@@ -1,5 +1,5 @@
 import { waitForElement } from './helpers.js';
-
+/* eslint-disable */
 function vimeoCallback() {
   !(function (e, t) {
     'object' == typeof exports && 'undefined' != typeof module
@@ -1407,5 +1407,7 @@ function vimeoCallback() {
     }
   };
 }
+
+/* eslint-enable */
 
 waitForElement('.main', vimeoCallback);
