@@ -29,8 +29,15 @@ section.gallery.gallery--fullscreen.gallery--background
     figure.gallery__item.gallery__item--s.gallery__item--js
       .gallery__wrapper.gallery__wrapper--js
         a.gallery__link(href='#')
-          video.gallery__video(autoplay='' loop='' muted='' playsinline='')
-            source(src=require('../assets/video/video-645x826.mp4') type='video/mp4')
+          div(style='padding: 128.15% 0 0 0; position: relative')
+            iframe(src='https://player.vimeo.com/video/686607125?h=836a2f413d&background=1&quality=1080p' frameborder='0' style='\
+            position: absolute;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            height: 100%;\
+            ' title='video-1080x1384')
+
       figcaption.gallery__header
         h2.gallery__title Consectetur adipisicing elit
         span.gallery__info CAMPAIGN

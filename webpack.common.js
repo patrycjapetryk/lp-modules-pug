@@ -4,10 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/js/index.js',
-    // background: './src/js/background.js',
-    // player: './src/js/player.js',
-    // products: './src/js/fullscreen.js',
-    // fullscreen: './src/js/products.js',
+    vimeo: './src/js/vimeo.js',
+    products: './src/js/productPoints.js',
   },
   output: {
     filename: 'js/[name].[hash:8].js',
@@ -98,7 +96,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/index.pug',
       inject: 'body',
-      chunks: ['index'],
+      chunks: ['index', 'vimeo', 'products'],
       filename: 'index.html',
       minify: false,
     }),
