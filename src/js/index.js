@@ -129,6 +129,10 @@ function lpCallback() {
         break;
     }
   };
+
+  videoTag.addEventListener('click', function () {
+    playPause();
+  });
 }
 
 function waitForElement(id, callback) {

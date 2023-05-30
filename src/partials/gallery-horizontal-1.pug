@@ -1,13 +1,13 @@
 section.gallery.gallery--center
   figure.gallery__item.gallery__item--xl.gallery__item--js
     .gallery__wrapper.gallery__wrapper--js
-      a.gallery__link(href='#')
+      a.gallery__link(href='#' aria-label='')
         picture
           source(srcset=require('../assets/images/photo-desktop-1606x903.jpg') media='(min-width: 768px)')
           img.gallery__image(src=require('../assets/images/photo-mobile-764x430.jpg') alt='' loading='lazy')
 
       article.product.product--js(style='left: 68%; top: 24%' tabindex='0')
-        .product__circle
+        
         a.product__link.product__link--js(href='https://ccc.eu/pl')
           header.product__text-wrapper
             h3.product__title Półbuty
@@ -15,12 +15,12 @@ section.gallery.gallery--center
             span.product__cta zobacz
 
       article.product.product--js(style='left: 39%; top: 94%' tabindex='0')
-        .product__circle
+        
         a.product__link.product__link--js(href='https://ccc.eu/pl')
           h3.product__text-wrapper Już wkrótce
 
     figcaption.gallery__header
       h2.gallery__title Consectetur adipisicing elit
       span.gallery__info CAMPAIGN
-      a.gallery__link(href='#')
+      a.gallery__link(href='#' aria-label='')
         span.gallery__cta Zobacz
