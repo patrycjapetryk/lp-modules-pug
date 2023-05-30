@@ -2,6 +2,7 @@ section.player
   .player__wrapper
     video.player__video.player__video--js(autoplay='' loop='' muted='' playsinline='')
       source(data-src=require('../assets/video/video-1920x1080.mp4') src=require('../assets/video/video-764x764.mp4') type='video/mp4')
-    .player__audio-btn.player__audio-btn--js
-      img.player__audio-btn-icon.player__audio-btn-icon--off.player__audio-btn-icon--off-js(src=require('../assets/images/audio-off.svg') alt='')
-      img.player__audio-btn-icon.player__audio-btn-icon--on.player__audio-btn-icon--on-js(src=require('../assets/images/audio-on.svg') alt='')
+
+    .player__audio-btn.player__audio-btn--js(role='button' tabindex='0')
+      img.player__audio-btn-icon.player__audio-btn-icon--off.player__audio-btn-icon--off-js(src=require('../assets/images/audio-off.svg') alt='' aria-hidden='true')
+      img.player__audio-btn-icon.player__audio-btn-icon--on.player__audio-btn-icon--on-js(src=require('../assets/images/audio-on.svg') alt='' aria-hidden='true')
