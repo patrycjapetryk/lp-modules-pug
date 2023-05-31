@@ -3,6 +3,7 @@ import { waitForElement } from './helpers.js';
 function vimeoCallback() {
   var mainVideo = document.querySelector('.main-video--js');
   var player = new Vimeo.Player(mainVideo);
+  var videoWrapper = document.querySelector('.player__button--js');
   var audioBtn = document.querySelector('.player__audio-btn--js');
   var audioIconOff = document.querySelector('.player__audio-icon--js');
   var audioIconOn = document.querySelector('.player__audio-icon--on--js');
@@ -41,6 +42,10 @@ function vimeoCallback() {
         break;
     }
   };
+
+  videoWrapper.addEventListener('click', function () {
+    playPause();
+  });
 }
 
 waitForElement('.main', vimeoCallback);
