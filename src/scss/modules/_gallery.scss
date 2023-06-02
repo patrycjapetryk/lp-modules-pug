@@ -156,6 +156,7 @@
     font-weight: $global-font-weight;
     letter-spacing: 0;
     text-transform: uppercase;
+    letter-spacing: -0.01em;
 
     @media (max-width: $breakpoint-small-mobile-width) {
       font-size: $global-font-size-s;
