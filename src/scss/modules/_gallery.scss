@@ -152,13 +152,13 @@
     position: absolute;
     left: 0;
     top: 6px;
-    font-size: $global-font-size-s;
+    font-size: $global-font-size-m;
     font-weight: $global-font-weight;
     letter-spacing: 0;
     text-transform: uppercase;
 
-    @media (max-width: $breakpoint-mobile-width) {
-      font-size: $global-font-size-xs;
+    @media (max-width: $breakpoint-small-mobile-width) {
+      font-size: $global-font-size-s;
     }
   }
 
@@ -182,7 +182,7 @@
     color: $main-color;
 
     @media (max-width: $breakpoint-mobile-width) {
-      font-size: $global-font-size-ms;
+      font-size: $global-font-size-m;
       margin: 0;
     }
   }
