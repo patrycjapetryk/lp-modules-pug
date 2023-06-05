@@ -119,6 +119,7 @@
     text-transform: uppercase;
     margin: 3px 0 0 0;
     color: $main-color;
+    text-decoration: underline;
 
     @media (max-width: $breakpoint-mobile-width) {
       font-size: $global-font-size-m;
