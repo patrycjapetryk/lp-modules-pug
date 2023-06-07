@@ -24,7 +24,7 @@
     color: $second-color !important;
     background-color: $main-color;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none !important;
     margin: $button-margin;
     transition: 0.2s;
 
@@ -54,7 +54,7 @@
     color: $button-color;
     line-height: $button-line-height;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none !important;
     letter-spacing: 0.02em;
     margin: $button-margin;
     border-bottom: 1px solid $main-color;
